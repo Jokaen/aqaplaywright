@@ -1,0 +1,26 @@
+{
+  "name": "aqaplaywright",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Jokaen/aqaplaywright#readme",
+  "bugs": {
+    "url": "https://github.com/Jokaen/aqaplaywright/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jokaen/aqaplaywright.git"
+  },
+  "license": "ISC",
+  "author": "jokaen",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "playwright:test:headless": "playwright test",
+    "playwright:test:headed": "playwright test --headed",
+    "playwright:ui": "playwright test --ui"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^24.1.0"
+  }
+}
