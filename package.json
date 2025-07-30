@@ -16,7 +16,7 @@
   "main": "index.js",
   "scripts": {
     "playwright:test:headless": "playwright test",
-    "playwright:test:headed": "playwright test --headed",
+    "playwright:test:headed": "playwright test tests/HomeWork23/homework23.spec.js --headed --project=chrome",
     "playwright:ui": "playwright test --ui"
   },
   "devDependencies": {
