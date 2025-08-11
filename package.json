@@ -16,11 +16,16 @@
   "main": "index.js",
   "scripts": {
     "playwright:test:headless": "playwright test",
-    "playwright:test:headed": "playwright test tests/HomeWork24/homework24.spec.js --headed --project=chrome",
+    "playwright:qauto:headed": "cross-env ENV_NAME=qauto playwright test tests/HomeWork24/homework24.spec.js --headed --project=chrome",
+    "playwright:qauto2:headed": "cross-env ENV_NAME=qauto2 playwright test tests/HomeWork24/homework24.spec.js --headed --project=chrome",
     "playwright:ui": "playwright test --ui"
   },
   "devDependencies": {
     "@playwright/test": "^1.54.1",
-    "@types/node": "^24.1.0"
+    "@types/node": "^24.1.0",
+    "cross-env": "^10.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1"
   }
 }
