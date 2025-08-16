@@ -1,5 +1,8 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
+import dotenv from 'dotenv'
+
+dotenv.config({ path: `./configs/.env.${process.env.ENV_NAME || 'qauto'}` });
 
 /**
  * Read environment variables from file.
@@ -28,7 +31,7 @@ export default defineConfig({
   use: {
     actionTimeout: 5_000,
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'https://qauto.forstudy.space',
+    baseURL: process.env.BASE_URL || 'https://qauto.forstudy.space',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on',
@@ -36,8 +39,8 @@ export default defineConfig({
     headless: false,
     ignoreHTTPSErrors: true,
     httpCredentials: {
-      username: 'guest',
-      password: 'welcome2qauto',
+      username: `${process.env.HTTP_CREDENTIALS_USERNAME}`,
+      password: `${process.env.HTTP_CREDENTIALS_PASSWORD}`,
     },
 
     viewport: { width: 1920, height: 1080 },
