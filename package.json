@@ -16,7 +16,7 @@
   "main": "index.js",
   "scripts": {
     "playwright:test:headless": "playwright test",
-    "playwright:qauto:headed": "cross-env ENV_NAME=qauto playwright test tests/HomeWork27/homework27.spec.js --headed --project=chrome",
+    "playwright:qauto:headed": "cross-env ENV_NAME=qauto playwright test tests/HomeWork28/homework28.spec.js --headed --project=chrome",
     "playwright:qauto2:headed": "cross-env ENV_NAME=qauto2 playwright test tests/HomeWork24/homework24.spec.js --headed --project=chrome",
     "playwright:ui": "playwright test --ui",
     "playwright:user:setup": "cross-env ENV_NAME=qauto playwright test tests/setup/default-user.spec.js --headed --project=chrome"
